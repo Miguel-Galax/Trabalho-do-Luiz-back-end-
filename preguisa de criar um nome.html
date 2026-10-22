@@ -69,6 +69,9 @@ h2{font-size:clamp(1.6rem,5vw,2.2rem); letter-spacing:-.02em; margin:0 0 24px}
 .points li:last-child{border-left-color:var(--ok)}
 .points h3{margin:0 0 6px; font-size:1.05rem}
 .points p{margin:0; color:var(--muted); font-size:.95rem}
+.strength-nav{display:grid; grid-template-columns:1fr; gap:10px; padding:0; margin:0 0 24px}
+.strength-nav a{display:block; padding:12px 14px; border:1px solid var(--line); border-radius:6px; background:var(--surface); color:var(--ink); font-size:.9rem; font-weight:600; text-decoration:none}
+.strength-nav a:hover{border-color:var(--accent); color:var(--accent)}
 
 /* Item 3 */
 .more{padding:26px 22px; margin-bottom:56px; border:2px dashed var(--line); border-radius:18px}
@@ -82,6 +85,7 @@ a,button{outline-offset:3px}
 
 @media (min-width:760px){
   .hero{grid-template-columns:1.05fr 1fr; gap:56px; padding-top:48px}
+  .strength-nav{grid-template-columns:repeat(5,minmax(0,1fr))}
   .points{grid-template-columns:repeat(6,1fr)}
   .points li{grid-column:span 2}
   .points li:nth-child(1),.points li:nth-child(2){grid-column:span 3}
@@ -115,7 +119,14 @@ a,button{outline-offset:3px}
     </section>
 
     <section>
-      <h2>5 pontos fortes</h2>
+      <h2 id="strengths-title">5 pontos fortes</h2>
+      <nav class="strength-nav" aria-labelledby="strengths-title">
+        <a href="armazenamento.html">Armazenamento</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="acessibilidade.html">Acessibilidade</a>
+        <a href="comunicacao.html">Comunicação</a>
+        <a href="autenticidade.html">Autenticidade</a>
+      </nav>
       <ul class="points">
         <li>
           <h3>Grande armazenamento de dados</h3>
