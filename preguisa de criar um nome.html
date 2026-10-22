@@ -63,20 +63,13 @@ h1{font-size:clamp(2.6rem,9vw,4.6rem); line-height:1.02; margin:0 0 18px; letter
 
 /* Pontos fortes */
 h2{font-size:clamp(1.6rem,5vw,2.2rem); letter-spacing:-.02em; margin:0 0 24px}
-.points{display:grid; gap:14px; padding:0; margin:0 0 64px; list-style:none}
-.points li{padding:20px 22px; background:var(--surface); border:1px solid var(--line); border-left:6px solid var(--accent); border-radius:6px 18px 18px 6px}
-.points li:nth-child(even){border-left-color:var(--sun)}
-.points li:last-child{border-left-color:var(--ok)}
-.points h3{margin:0 0 6px; font-size:1.05rem}
-.points p{margin:0; color:var(--muted); font-size:.95rem}
-.strength-nav{display:grid; grid-template-columns:1fr; gap:10px; padding:0; margin:0 0 24px}
-.strength-nav a{display:block; padding:12px 14px; border:1px solid var(--line); border-radius:6px; background:var(--surface); color:var(--ink); font-size:.9rem; font-weight:600; text-decoration:none}
-.strength-nav a:hover{border-color:var(--accent); color:var(--accent)}
-
-/* Item 3 */
-.more{padding:26px 22px; margin-bottom:56px; border:2px dashed var(--line); border-radius:18px}
-.more h2{margin-bottom:8px; font-size:1.3rem}
-.more p{margin:0; color:var(--muted)}
+.strength-nav{display:grid; grid-template-columns:1fr; gap:10px; padding:0; margin:0 0 64px}
+.strength-nav a{display:grid; grid-template-columns:32px minmax(0,1fr); align-items:center; gap:10px; min-height:82px; padding:14px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); text-decoration:none; transition:border-color .18s ease,transform .18s ease}
+.strength-nav a:hover{border-color:var(--accent); transform:translateY(-2px)}
+.strength-number{display:grid; place-items:center; width:30px; height:30px; border-radius:50%; background:var(--sky); color:var(--accent); font-size:.75rem; font-weight:700}
+.strength-copy strong,.strength-copy small{display:block}
+.strength-copy strong{font-size:.9rem; line-height:1.35}
+.strength-copy small{margin-top:3px; color:var(--muted); font-size:.74rem}
 
 footer{padding:24px 0 40px; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem}
 
@@ -85,10 +78,10 @@ a,button{outline-offset:3px}
 
 @media (min-width:760px){
   .hero{grid-template-columns:1.05fr 1fr; gap:56px; padding-top:48px}
+  .strength-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:960px){
   .strength-nav{grid-template-columns:repeat(5,minmax(0,1fr))}
-  .points{grid-template-columns:repeat(6,1fr)}
-  .points li{grid-column:span 2}
-  .points li:nth-child(1),.points li:nth-child(2){grid-column:span 3}
 }
 </style>
 </head>
@@ -119,43 +112,16 @@ a,button{outline-offset:3px}
     </section>
 
     <section>
-      <h2 id="strengths-title">5 pontos fortes</h2>
+      <h2 id="strengths-title">Os cinco pontos fortes</h2>
       <nav class="strength-nav" aria-labelledby="strengths-title">
-        <a href="armazenamento.html">Armazenamento</a>
-        <a href="seguranca.html">Segurança</a>
-        <a href="acessibilidade.html">Acessibilidade</a>
-        <a href="comunicacao.html">Comunicação</a>
-        <a href="autenticidade.html">Autenticidade</a>
+        <a href="armazenamento.html"><span class="strength-number">01</span><span class="strength-copy"><strong>Armazenamento</strong><small>Dados e backup</small></span></a>
+        <a href="seguranca.html"><span class="strength-number">02</span><span class="strength-copy"><strong>Segurança</strong><small>Proteção de dados</small></span></a>
+        <a href="acessibilidade.html"><span class="strength-number">03</span><span class="strength-copy"><strong>Acessibilidade</strong><small>Para diferentes comércios</small></span></a>
+        <a href="comunicacao.html"><span class="strength-number">04</span><span class="strength-copy"><strong>Comunicação</strong><small>Tradução automática</small></span></a>
+        <a href="autenticidade.html"><span class="strength-number">05</span><span class="strength-copy"><strong>Autenticidade</strong><small>Empresas verificadas</small></span></a>
       </nav>
-      <ul class="points">
-        <li>
-          <h3>Grande armazenamento de dados</h3>
-          <p>Espaço para guardar tudo, com backup.</p>
-        </li>
-        <li>
-          <h3>Segurança de dados</h3>
-          <p>As informações do seu comércio ficam protegidas.</p>
-        </li>
-        <li>
-          <h3>Acessível para todos</h3>
-          <p>Feita para comércios grandes ou pequenos.</p>
-        </li>
-        <li>
-          <h3>Facilidade de comunicação</h3>
-          <p>Fale com empresas estrangeiras através de tradução automática.</p>
-        </li>
-        <li>
-          <h3>Verificação de autenticidade</h3>
-          <p>Confirme que a empresa do outro lado é de verdade.</p>
-        </li>
-      </ul>
     </section>
 
-    <!-- Complete com o texto do item 3 das suas anotações -->
-    <section class="more">
-      <h2>Mais detalhes</h2>
-      <p>Depois de um certo período de tempo que o site melhorar, os dados de conversas seriam transferidos para outro site que seria protegido por criptografia, além de oferecer maior segurança em relação à pirataria e a sites comerciais (sites que fingem ser o site oficial do trabalho para roubar dados). Caso que é possível ver o perigo em outros sites, o objetivo do site do nosso trabalho é ter um formato mais complexo de manual sobre a acessibilidade e o perigo de sites e softwares. Todo dia, a tradução automática tem como objetivo te ajudar em comunicações de funcionários de outros países que trabalham na empresa. Como o tradutor funciona: ele é um tradutor dentro do site como uma IA que traduz textos, bem como a comunicação de forma correta com os outros idiomas. Para a verificação de autenticidade, haverá um funcionário e uma TI para retirar empresas falsas e que tenham copyright.</p>
-    </section>
   </main>
 
   <footer>Global Cloud · rede de conexão para o comércio e as empresas</footer>
